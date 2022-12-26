@@ -1,0 +1,221 @@
+* {
+    outline: 1px solid #363;
+}
+
+/* {header */
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    color: #fff;
+    padding: 24px 0;
+
+    z-index: 999;
+}
+
+.header .inner {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.header .inner {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.header .inner>h1>a {
+    display: block;
+    background: url(../img/cj_logo2.svg) no-repeat center center/cover;
+    width: 60px;
+    height: 52px;
+}
+
+.header .inner .gnb {
+    font-size: 18px;
+}
+
+.header .inner .gnb>ul {
+    display: flex;
+    gap: 30px;
+}
+
+.header .inner .gnb>ul>li>a {
+    display: block;
+    line-height: 52px;
+}
+
+.header .inner .setting {
+    display: flex;
+    gap: 50px;
+    cursor: pointer;
+}
+
+.header .inner .setting .language span {
+    display: block;
+    position: relative;
+    line-height: 52px;
+    transition: 0.5s;
+}
+
+.header .inner .setting .language span:hover {
+    color: #369;
+}
+
+.header .inner .setting .language span:hover>i {
+    transform: rotate(180deg);
+    color: #369;
+}
+
+.header .inner .setting .language span::after {
+    position: absolute;
+    content: "";
+    top: -10px;
+    right: -25px;
+    width: 100px;
+    height: 140px;
+    background: #fff;
+    border: 1px solid #ddd;
+    z-index: -1;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.header .inner .setting .language span:hover::after {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+
+.header .inner .setting .language .other_language {
+    position: absolute;
+    top: 45px;
+    left: 0;
+    right: 0;
+    line-height: 35px;
+    color: #333;
+    z-index: 999;
+
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+.header .inner .setting .language .other_language li:hover {
+    color: #369;
+}
+
+.header .inner .setting .language span:hover .other_language {
+    visibility: visible;
+}
+
+.header .inner .setting>i {
+    line-height: 52px;
+    font-size: 25px;
+}
+
+/* header} */
+
+/* {mainVisual */
+.mainVisual {
+    height: 100vh;
+}
+
+.mainVisual video {
+    vertical-align: middle;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* mainVisual} */
+
+/* {livenewcj */
+.livenewcj {
+    padding: 100px 0;
+}
+
+.livenewcj .inner {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.livenewcj .inner .intro {
+    margin: 0 0 60px 0;
+}
+
+.livenewcj .inner h2>a {
+    display: block;
+    font-size: 40px;
+    font-weight: 700;
+    background-image: linear-gradient(90deg, red, orange, yellow, green, blue, navy, purple);
+    -webkit-background-clip: text;
+    color: transparent;
+    margin: 0 0 30px 0;
+}
+
+.livenewcj .inner .desc {
+    display: flex;
+    justify-content: space-between;
+}
+
+.livenewcj .inner .desc p {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.livenewcj .inner .desc i {
+    line-height: 20px;
+}
+
+.livenewcj .inner li {
+    display: flex;
+    justify-content: space-between;
+}
+
+.livenewcj .inner li .pictures {
+    width: 400px;
+}
+
+.livenewcj .inner li .pictures figure {
+    position: relative;
+    padding: 0 80px 40px 0;
+}
+
+.livenewcj .inner li .pictures figure video {
+    width: 100%;
+    height: 100%;
+}
+
+.livenewcj .inner li .pictures figure .smallpic {
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.livenewcj .inner li .pictures figure .smallpic img {
+    width: 180px;
+    height: 240px;
+
+}
+
+.livenewcj .inner li .pictures figure .drawpic {
+    display: inline-block;
+    position: absolute;
+    bottom: 150px;
+    right: 0;
+}
+
+.livenewcj .inner li .pictures figure .drawpic img {
+    width: 200px;
+    height: 200px;
+}
+
+.livenewcj .inner li .slogans {
+    width: 700px;
+}
