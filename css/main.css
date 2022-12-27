@@ -1,10 +1,19 @@
-* {
+/* * {
     outline: 1px solid #363;
+} */
+
+@font-face {
+    font-family: 'CJONLYONENEW';
+    src: local('CJONLYONENEW') url('../css/CJ+ONLYONE+Bold.ttf') format('truetype');
+}
+
+.bb {
+    font-family: 'CJONLYONENEW';
 }
 
 /* {header */
 .header {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -39,7 +48,7 @@
 
 .header .inner .gnb>ul {
     display: flex;
-    gap: 30px;
+    gap: 60px;
 }
 
 .header .inner .gnb>ul>li>a {
@@ -122,6 +131,9 @@
 
 /* {mainVisual */
 .mainVisual {
+    position: fixed;
+    top: 0;
+    width: 100%;
     height: 100vh;
 }
 
@@ -133,22 +145,40 @@
 }
 
 /* mainVisual} */
-
 /* {livenewcj */
-.livenewcj {
+.mainlivenewcj {
+    position: relative;
+    z-index: 999;
+
+}
+
+.mainlivenewcj .bg {
+    background: #fff;
     padding: 100px 0;
 }
 
-.livenewcj .inner {
+
+.mainlivenewcj::before {
+    content: "";
+    display: block;
+    height: calc(100vh);
+}
+
+.mainlivenewcj.on::before {
+    height: calc(100vh - 200px);
+    transition: 1s 0.5s;
+}
+
+.mainlivenewcj .inner {
     width: 1200px;
     margin: 0 auto;
 }
 
-.livenewcj .inner .intro {
+.mainlivenewcj .inner .intro {
     margin: 0 0 60px 0;
 }
 
-.livenewcj .inner h2>a {
+.mainlivenewcj .inner h2>a {
     display: block;
     font-size: 40px;
     font-weight: 700;
@@ -158,64 +188,397 @@
     margin: 0 0 30px 0;
 }
 
-.livenewcj .inner .desc {
+.mainlivenewcj .inner .desc {
     display: flex;
     justify-content: space-between;
 }
 
-.livenewcj .inner .desc p {
+.mainlivenewcj .inner .desc p {
     font-size: 20px;
     font-weight: 300;
 }
 
-.livenewcj .inner .desc i {
+.mainlivenewcj .inner .desc i {
     line-height: 20px;
 }
 
-.livenewcj .inner li {
+.mainlivenewcj .inner li {
     display: flex;
     justify-content: space-between;
 }
 
-.livenewcj .inner li .pictures {
+.mainlivenewcj .inner li .pictures {
     width: 400px;
 }
 
-.livenewcj .inner li .pictures figure {
+.mainlivenewcj .inner li .pictures figure {
     position: relative;
     padding: 0 80px 40px 0;
 }
 
-.livenewcj .inner li .pictures figure video {
+.mainlivenewcj .inner li .pictures figure video {
     width: 100%;
     height: 100%;
+    border-radius: 10% 0;
 }
 
-.livenewcj .inner li .pictures figure .smallpic {
+.mainlivenewcj .inner li .pictures figure .smallpic {
     display: inline-block;
     position: absolute;
     bottom: 0;
     right: 0;
+
 }
 
-.livenewcj .inner li .pictures figure .smallpic img {
+.mainlivenewcj .inner li .pictures figure .smallpic img {
     width: 180px;
     height: 240px;
+    border-radius: 10% 0;
 
 }
 
-.livenewcj .inner li .pictures figure .drawpic {
+.mainlivenewcj .inner li .pictures figure .drawpic {
     display: inline-block;
     position: absolute;
     bottom: 150px;
     right: 0;
 }
 
-.livenewcj .inner li .pictures figure .drawpic img {
+.mainlivenewcj .inner li .pictures figure .drawpic img {
     width: 200px;
     height: 200px;
 }
 
-.livenewcj .inner li .slogans {
+.mainlivenewcj .inner li .slogans {
+    padding: 100px 0;
     width: 700px;
+}
+
+.mainlivenewcj .inner li .slogans h3 {
+    font-size: 40px;
+    color: #000;
+    margin: 0 0 30px 0;
+    line-height: 45px;
+}
+
+.mainlivenewcj .inner li .slogans p {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 25px;
+    margin: 0 0 50px 0;
+}
+
+.mainlivenewcj .inner li .slogans a {
+    display: inline-block;
+    padding: 15px 40px;
+    border: 1px solid #ddd;
+}
+
+/* {reversal */
+.mainlivenewcj .inner .reversal .pictures figure {
+    position: relative;
+    padding: 0 0 40px 80px;
+}
+
+.mainlivenewcj .inner .reversal .pictures figure video {
+    width: 100%;
+    height: 100%;
+}
+
+.mainlivenewcj .inner .reversal .pictures figure .smallpic {
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.mainlivenewcj .inner .reversal .pictures figure .smallpic img {
+    width: 180px;
+    height: 240px;
+
+}
+
+.mainlivenewcj .inner .reversal .pictures figure .drawpic {
+    display: inline-block;
+    position: absolute;
+    bottom: 150px;
+    left: 0;
+}
+
+.mainlivenewcj .inner .reversal .pictures figure .drawpic img {
+    width: 200px;
+    height: 200px;
+}
+
+.mainlivenewcj .inner .reversal .slogans {
+    width: 700px;
+}
+
+/* reversal} */
+
+/* {mainCJNOW */
+.mainCJNOW {
+    padding: 100px 0;
+}
+
+.mainCJNOW .inner {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.mainCJNOW .inner .intro {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mainCJNOW .inner .intro h2>a {
+    display: block;
+    font-size: 40px;
+    font-weight: 700;
+    color: #000;
+    margin: 0 0 30px 0;
+}
+
+.mainCJNOW .inner .intro a>i {
+    font-size: 20px;
+}
+
+.mainCJNOW .inner .top {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    margin: 0 0 50px 0;
+}
+
+.mainCJNOW .inner .top .slogan {
+    padding: 100px 0 0 0;
+}
+
+.mainCJNOW .inner .top .slogan span {
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 400;
+    color: #000;
+    line-height: 35px;
+    margin: 0 0 50px 0;
+}
+
+.mainCJNOW .inner .top .slogan ul {
+    display: flex;
+    gap: 15px;
+}
+
+.mainCJNOW .inner .top .slogan ul>li>a {
+    display: inline-block;
+    padding: 10px 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px 0;
+    font-size: 12px;
+}
+
+.mainCJNOW .inner .top .picture {
+    width: 585px;
+}
+
+.mainCJNOW .inner .top .picture img {
+    width: 100%;
+}
+
+.mainCJNOW .inner .bottom {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.mainCJNOW .inner .bottom figure {
+    position: relative;
+    width: 380px;
+    height: 310px;
+}
+
+.mainCJNOW .inner .bottom figure img {
+    width: 100%;
+    height: 200px;
+    margin: 0 0 20px 0;
+}
+
+.mainCJNOW .inner .bottom figure p {
+    font-size: 20px;
+    font-weight: 300;
+    color: #000;
+    margin: 0 0 20px 0;
+}
+
+.mainCJNOW .inner .bottom figure ul {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    gap: 10px;
+}
+
+.mainCJNOW .inner .bottom figure ul>li>a {
+    display: inline-block;
+    padding: 10px 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px 0;
+    font-size: 12px;
+}
+
+/* mainCJNOW} */
+
+/* {mainBestBrand */
+
+.mainBestBrand {
+    position: relative;
+    height: 750px;
+}
+
+.mainBestBrand video {
+    vertical-align: middle;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.mainBestBrand .inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1200px;
+
+    color: #fff;
+    text-align: center;
+}
+
+.mainBestBrand .inner h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0 0 40px 0;
+}
+
+.mainBestBrand .inner p {
+    font-size: 25px;
+    margin: 0 0 100px 0;
+}
+
+.mainBestBrand .inner span {
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    margin: 0 0 60px 0;
+}
+
+.mainBestBrand .inner a {
+    display: inline-block;
+    font-size: 20px;
+    padding: 12px 22px;
+    border: 1px solid #fff;
+}
+
+/* mainBestBrand} */
+
+/* {mainCJLOG */
+
+.mainCJLOG {
+    padding: 100px 0;
+}
+
+.mainCJLOG .inner {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.mainCJLOG .inner .intro {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mainCJLOG .inner h2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #000;
+    margin: 0 0 30px 0;
+}
+
+.mainCJLOG .inner .intro i {
+    font-size: 20px;
+}
+
+.mainCJLOG .inner .log_wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+
+.mainCJLOG .inner .log_wrap img {
+    margin: 0 0 20px 0;
+    width: 584px;
+}
+
+
+
+.mainCJLOG .inner .log_wrap p {
+    margin: 0 0 20px 0;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.mainCJLOG .inner .log_wrap ul {
+    display: flex;
+    gap: 15px;
+}
+
+.mainCJLOG .inner .log_wrap ul>li>a {
+    display: inline-block;
+    padding: 10px 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px 0;
+    font-size: 12px;
+}
+
+/* mainCJLOG} */
+
+/* {footer */
+
+.footer {
+    padding: 50px 0;
+    border-top: 1px solid #ddd;
+}
+
+.footer .inner {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.footer .inner ul {
+    display: flex;
+    gap: 30px;
+    margin: 0 0 30px 0;
+}
+
+.footer .inner ul>li {
+    position: relative;
+}
+
+.footer .inner ul>li~li::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: -15px;
+    transform: translate(0, -50%);
+    width: 1px;
+    height: 10px;
+    background: #ddd;
+}
+
+.footer .inner ul>li>a {
+    display: inline-block;
+    font-size: 14px;
+}
+
+.footer .inner p {
+    font-size: 14px;
 }

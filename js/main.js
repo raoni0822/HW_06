@@ -1,0 +1,4 @@
+$(function () {
+    $('.mainlivenewcj').addClass('on')
+
+})
