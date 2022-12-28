@@ -13,19 +13,26 @@
     color: #fff;
     padding: 24px 0;
 
-    z-index: 9999999999;
+
 }
 
 .header.on {
     top: -100px;
     z-index: 999;
-    background: #333;
+
 }
 
-.header.ox {
+.header.tt {
     top: -100px;
     z-index: 999999999999999;
-    background: #333;
+
+}
+
+.header.ff {
+    top: 0;
+    background: #369;
+    z-index: 999999999999999;
+
 }
 
 .header .inner {
